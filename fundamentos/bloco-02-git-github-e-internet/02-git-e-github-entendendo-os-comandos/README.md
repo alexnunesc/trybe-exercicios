@@ -1,3 +1,5 @@
+## dia 2.2
+
 ## O que vamos aprender?
 <p>Você já aprendeu o que é o Git! Agora chegou o momento de saber ainda mais sobre o GitHub que vai te ajudar a salvar seus códigos remotamente e a trabalhar de maneira colaborativa e distribuída. 🧩</p>
 

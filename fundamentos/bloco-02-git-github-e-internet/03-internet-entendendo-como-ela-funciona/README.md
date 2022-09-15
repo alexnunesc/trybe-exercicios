@@ -1,3 +1,4 @@
+## dia 3.2
 <h1>Você será capaz de:</h1>
 <ul>
     <li>Explicar de forma simples como a internet funciona;</li>
