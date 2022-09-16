@@ -1,9 +1,16 @@
 .super-mario {
     width: 200px;
+    position: absolute;
+    z-index: 1;
+    left: 20px;
   }
   
   .goomba {
     width: 100px;
+    position: absolute;
+    top: 350px;
+    z-index: 2;
+    left: 100px;
   }
   
   .baloon {
@@ -16,4 +23,5 @@
   
   .bowser {
     width: 200px;
+ 
   }
