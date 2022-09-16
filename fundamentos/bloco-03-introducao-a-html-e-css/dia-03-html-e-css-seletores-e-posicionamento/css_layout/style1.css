@@ -14,14 +14,22 @@
   }
   
   .baloon {
+    width: 200px;
+    position: absolute;
+    left: 250px;
   
   }
   
   .speech {
     font-size: 25px;
+    position: absolute;
+    left: 275px;
+    z-index: 4;
   }
   
   .bowser {
-    width: 200px;
- 
+    width: 300px;
+    position: absolute;
+    left: 350px;
+    top: 210px;
   }
