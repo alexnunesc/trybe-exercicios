@@ -1,3 +1,11 @@
-h1 , p {
+.centralizar{
     text-align: center;
+}
+
+.corLiFilm:hover {
+    background-color: aquamarine;
+    width: 20%;
+}
+.corLiFilm:active {
+    color: rgb(142, 8, 160);
 }
