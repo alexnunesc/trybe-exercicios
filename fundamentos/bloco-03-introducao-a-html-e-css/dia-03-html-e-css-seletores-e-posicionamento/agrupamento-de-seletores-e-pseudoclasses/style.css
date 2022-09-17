@@ -7,5 +7,9 @@
     width: 20%;
 }
 .corLiFilm:active {
-    color: rgb(142, 8, 160);
+    font-weight: bold;
+    color: rgb(236, 8, 225);
+}
+ul,ol {
+    list-style: none;
 }
