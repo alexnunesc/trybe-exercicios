@@ -54,3 +54,8 @@ div:nth-child(odd) > h3 {
     font-style: italic;
     color: blueviolet;
 }
+
+div:nth-of-type(3) {
+    width: 200px;
+    height: 100px;
+}
