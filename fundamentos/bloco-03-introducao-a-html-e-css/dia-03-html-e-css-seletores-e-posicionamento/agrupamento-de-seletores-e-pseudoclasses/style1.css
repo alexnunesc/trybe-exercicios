@@ -18,3 +18,21 @@ div:hover:nth-of-type(4){
 div:hover:nth-of-type(5){
     background-color: rgb(110, 104, 9);
 }
+
+
+
+div:hover:nth-of-type(1) > h3{  /*o que for menor que a div receber o valor da function*/
+    color: rgb(82, 105, 235);
+}
+div:hover:nth-of-type(2) > h3{
+    color: rgb(209, 14, 167);
+}
+div:hover:nth-of-type(3) > h3{
+    color: rgb(14, 209, 102);
+}
+div:hover:nth-of-type(4) > h3{
+    color: rgb(53, 219, 248);
+}
+div:hover:nth-of-type(5) > h3 {
+    color:rgb(110, 104, 9);
+}
