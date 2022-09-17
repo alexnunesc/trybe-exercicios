@@ -36,3 +36,8 @@ div:hover:nth-of-type(4) > h3{
 div:hover:nth-of-type(5) > h3 {
     color:rgb(110, 104, 9);
 }
+
+div:nth-child(odd) > h3 {
+    font-style: italic;
+    color: blueviolet;
+}
