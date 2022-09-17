@@ -1,0 +1,4 @@
+div:hover {
+    border: solid black;
+    display: inline-block;
+}
