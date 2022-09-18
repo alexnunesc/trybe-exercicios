@@ -27,3 +27,10 @@ img {
 ol li {
     font-family: 'Courier New', Courier, monospace;
 }
+
+.px20.negrito {
+    font-weight: bold;
+}
+li {
+    font-size: 20px;
+}
