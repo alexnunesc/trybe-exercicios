@@ -1,4 +1,21 @@
 body {
     width: 500px;
-    margin: auto;
+    text-align: center;
+    margin: auto    ;
+   
+}
+.olAmarela {
+    background-color: rgb(252, 248, 1);
+}
+ol li:nth-child(odd){
+    background-color: green;
+}
+ol li:nth-child(even){
+    text-transform: uppercase;
+}
+img {
+    width: 100px;
+}
+.leftList {
+    text-align: left;
 }
