@@ -18,4 +18,12 @@ img {
 }
 .leftList {
     text-align: left;
+} 
+.red.em {
+    color: red;
+    font-size: 40px;
+    border:  1px solid black;
+}
+ol li {
+    font-family: 'Courier New', Courier, monospace;
 }
