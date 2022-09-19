@@ -19,6 +19,7 @@ img {
 .leftList {
     text-align: left;
 } 
+
 .red.em {
     color: red;
     font-size: 40px;
@@ -33,4 +34,57 @@ ol li {
 }
 li {
     font-size: 20px;
+}
+li.liFonteAzul.javaBackgroundPink {
+    background-color: palevioletred;
+}
+.liFonteAzul {
+    color: blue;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:active {
+    color: rgb(247, 0, 0);
+}
+.lg {
+    width: 80px;
+    border: 1px solid black;
+    line-height: 50px;
+    display: inline-block;
+    margin: 2px;
+    padding: 5px;
+    height: 30px;
+}
+
+.parceirosDev {
+    width: 150px;
+    line-height: 50px;
+    padding: 1px;
+    background-color: rgb(134, 218, 230);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    font-style: italic;
+    
+}
+li.parceirosDev:hover {
+    font-weight: bolder;
+}
+
+li.parceirosDev.StackOverflow:hover {
+    color: orange;
+    background-color: orange;
+}
+li.greem:hover {
+    color: green;
+    background-color: green;
+}
+li.MDM:hover {
+    color: black;
+    background-color: black;
+}
+li.DevDocs:hover {
+    color: yellow;
+    background-color: yellow;
 }
