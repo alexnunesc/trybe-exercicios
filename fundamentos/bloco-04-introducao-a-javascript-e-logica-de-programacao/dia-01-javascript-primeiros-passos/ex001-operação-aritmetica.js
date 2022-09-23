@@ -4,17 +4,17 @@ const b = 5;
 
 let res = 0;
 
-let operacao = "altere"; // << Adicione um operado aritmético (* / + -).
+let operacao = "ftccg"; // << Adicione um operado aritmético (* / + -).
 
-if (operacao == '+') {
+if (operacao === '+') {
   res = a + b;
-} else if (operacao == '-') {
+} else if (operacao === '-') {
   res = a - b;
-} else if (operacao == '*') {
+} else if (operacao === '*') {
   res = a * b;
-} else if (operacao == '/') {
+} else if (operacao === '/') {
   res = a / b;
-} else if (operacao == '%') {
+} else if (operacao === '%') {
   res = a % b;
 } else {
   res = 'error operado invalido'
