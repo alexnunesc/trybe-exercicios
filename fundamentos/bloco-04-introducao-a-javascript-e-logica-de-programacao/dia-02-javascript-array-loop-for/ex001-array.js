@@ -24,7 +24,7 @@ for (let i in numbers) {
     impar ++;
   }
   
-}
+};
 
 console.log('          ');
 
@@ -32,7 +32,7 @@ if(s > 20) {
   m = 'maior que 20';
 } else {
   m = 'menor ou igual a 20';
-}
+};
 
 console.log('          ');
 
@@ -46,5 +46,5 @@ for (let index = 0; index <= 25; index ++) {
   array.push(index);
   v2 = array[index]/2;
   console.log(v2);
-}
+};
 console.log(array)
