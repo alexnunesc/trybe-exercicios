@@ -1,12 +1,12 @@
-let n = 5;
-let fat = 1;
+let numeroFatorado = 5;
+let fatorial = 1;
 
-for (let index = n; index > 1; index -= 1) {
-  fat *= index;
+for (let index = numeroFatorado; index > 1; index -= 1) {
+  fatorial *= index;
   
 }
 /* for (let i = n; i >= n.length -1; i-= 1) {
   f *= i;
 } */
 
-console.log(fat);
+console.log(fatorial);
