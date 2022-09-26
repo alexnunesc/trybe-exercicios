@@ -1,4 +1,4 @@
-let numeroFatorado = 5;
+let numeroFatorado = 4;
 let fatorial = 1;
 
 for (let index = numeroFatorado; index > 1; index -= 1) { //enquanto index que receber o numero fatorado, for maior  que 1
