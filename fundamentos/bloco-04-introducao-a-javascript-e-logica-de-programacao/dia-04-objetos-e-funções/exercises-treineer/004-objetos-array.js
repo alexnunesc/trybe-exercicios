@@ -3,7 +3,7 @@ let moradores = [
     nome: 'Luiza',
     sobrenome: 'Guimarães',
     andar: 10,
-    apartamento: 1005,
+    apartameno: t1005,
   },
   {
     nome: 'William',
