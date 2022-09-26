@@ -63,8 +63,9 @@ console.log(`Conteúdo da matriz ${'\n'}${res}`); */
 
 
 
-let linhas = 3;
-let colunas = 3;
+let linhas = 4;
+let colunas = 5;
+/* let meio = (colunas / 2); */
 
 let matriz = [];
 
@@ -78,14 +79,16 @@ for (let index = 0; index < linhas; index++) {
 let text = '*';
 for (let l = 0; l < linhas; l++){
   for (let c = 0; c < colunas; c++) {
-    if (c < 1) {
+    if (c === 2 && l === 0) {
       matriz [l][c] = text;
-    } else if (l >= 1 && c <= 1){
+    } else if (l === 1 && c != 1 && c != 3){
       matriz [l][c] = text;
-    }else if (l >= 2 && c <= 2){
-    matriz [l][c] = text;
-    } else {
+    } else if (l === 1 && c === 1 && c === 3){
       matriz [l][c] = '';
+    } /*  else if (l === 2){
+    matriz [l][c] = text;
+    }  */else {
+      matriz [l][c] += '';
     }
     
   };
