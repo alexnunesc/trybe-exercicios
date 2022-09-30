@@ -21,8 +21,19 @@
     let list = document.querySelector('.list');                                                                         
     for (let i =  0; i < ingredientes.length; i += 1){
       let li = document.createElement('li');
+      li.className = 'remove';
       li.innerHTML = ingredientes[i];
       list.appendChild(li);
+    }
+
+    let removeIngredientes = document.querySelectorAll('.remove');
+
+    for (let i = 0; i < removeIngredientes.length; i += 1) {
+      let elemet = removeIngredientes[i];
+
+      if (elemet.innerText.includes('seis')) {//se na condição incluir o seis
+        list.removeChild(elemet);//no pai principal UL, ele revome o conteudo da var elemet
+      }
     }
   </script>
 </body>
