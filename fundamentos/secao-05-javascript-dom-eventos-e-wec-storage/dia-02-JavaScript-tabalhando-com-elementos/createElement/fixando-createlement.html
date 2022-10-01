@@ -22,18 +22,20 @@
   <script>
     let pai = document.querySelector('#pai');
     let irmao = document.createElement('section');
-    irmao.setAttribute('id', 'filhoFilho');
+    irmao.id = 'filhoFilho';
     irmao.innerHTML = 'oi';
     pai.appendChild(irmao);
 
     let criarFilho = document.querySelector('#primeiroFilhoDoFilho');
     let filho1 = document.createElement('section');
-    filho1.setAttribute('id', 'teste');
-    filho1.innerHTML = 'teste';
+    filho1.id = 'teste';
     criarFilho.appendChild(filho1);
     
-    document.querySelector('#teste').parentElement.parentElement.
-   parentElement.lastElementChild.previousElementSibling.innerHTML = 'penultimo filho';
+    let terciroF = filho1.parentElement.parentElement.nextElementSibling;
+    console.log(terciroF);
+
+
+
   </script>
 </body>
 </html>
