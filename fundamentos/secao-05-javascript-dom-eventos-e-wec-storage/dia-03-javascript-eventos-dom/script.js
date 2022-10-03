@@ -32,7 +32,9 @@ for (let i = 0; i < decemberDaysList.length; i += 1) {
   idUl.appendChild(liDays);
 
   //Os dias 24, 25 e 31 são feriados e, além da classe day, devem conter também a classe holiday. Ex: <li class="day
-  if (decemberDaysList[i] === 24 || decemberDaysList[i] === 25 || decemberDaysList[i] === 31) {
+ 
+
+  if (decemberDaysList[i] === 24 || decemberDaysList[i] === 25 ) {
     liDays.className = 'day holiday';
   };
 
@@ -41,17 +43,21 @@ for (let i = 0; i < decemberDaysList.length; i += 1) {
   };
 
   //Os dias 4, 11, 18 e 25 são sextas-feiras. Eles devem conter a classe day e a classe friday. Ex: <li class="day friday">4</li>
-  if (decemberDaysList[i] === 25) {
+  if (decemberDaysList[i] === 25 || decemberDaysList[i] === 31) {
     liDays.className = 'day holiday  friday';
   };
 
+/*   if (decemberDaysList[i].innerText.includes('Sexta')) {
+    liDays.className = 'sexta';
+  } */
+  
 }
 
 //Parte 2
 //Implemente uma função que crie dinamicamente um botão com o nome “Feriados”.
   let buttonsContainer = document.querySelector('.buttons-container'); //deixando essa seleção global
 
-let buttonFunction = (Feriados) => {
+  let buttonFunction = (Feriados) => {
 
   let buttonFeriado = document.createElement('button');
   //Adicione a este botão a ID "btn-holiday"
@@ -103,4 +109,21 @@ function sextaFeira (sexta) {
   buttonsContainer.appendChild(buttoSextaFeira);
 }
 
-sextaFeira('Sexta-Feira')
+sextaFeira('Sexta-Feira');
+
+//Parte 5
+//mplemente uma função que modifica o texto exibido nos dias que são Sexta-feira. Adicione ao botão “Sexta-feira” um evento de “click” e modifique o texto a ser exibido nos dias que são sextas-feiras. É interessante que esse botão possua também a lógica inversa. Ao ser clicado novamente, ele retorna à configuração inicial exibindo os dias.
+let buttoSextou = document.querySelector('#btn-friday')
+buttoSextou.addEventListener('click', sextouFunction);
+
+function sextouFunction (sextou) {
+  let mudarTexto = document.querySelectorAll('.friday');
+
+  for (let i = 0; i < mudarTexto.length; i += 1) {
+    if (mudarTexto[i].className.includes('Sextou!!!')) {
+      mudarTexto[i].innerHTML = mudarTexto[i];
+    } else {
+      mudarTexto[i].innerHTML = 'Sextou!!';
+    }
+  }
+}
