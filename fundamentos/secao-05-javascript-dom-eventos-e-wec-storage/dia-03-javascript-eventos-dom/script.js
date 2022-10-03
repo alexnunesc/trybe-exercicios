@@ -15,6 +15,8 @@ createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
 
+
+//Parte 1
 //A tag <ul> deve conter o id 'days'
 const idUl = document.querySelector('ul.task-list');
 idUl.id = 'days';
@@ -45,7 +47,10 @@ for (let i = 0; i < decemberDaysList.length; i += 1) {
 
 }
 
+//Parte 2
 //Implemente uma função que crie dinamicamente um botão com o nome “Feriados”.
+  let buttonsContainer = document.querySelector('.buttons-container'); //deixando essa seleção global
+
 let buttonFunction = (Feriados) => {
 
   let buttonFeriado = document.createElement('button');
@@ -54,14 +59,19 @@ let buttonFunction = (Feriados) => {
   buttonFeriado.innerHTML = Feriados;
   
   //Adicione este botão como filho/filha da tag <div> com classe "buttons-container"
-  let buttonsContainer = document.querySelector('.buttons-container');
+
+  /* let buttonsContainer = document.querySelector('.buttons-container'); */
   buttonsContainer.appendChild(buttonFeriado);
 
 }
 
 buttonFunction('Feriados');
 
+//Parte 3
 //Adicione ao botão "Feriados" um evento de "click" que altere a cor de fundo dos dias que possuem a classe "holiday" É interessante que esse botão possua também a lógica inversa. Ao ser clicado novamente, ele retorna à configuração inicial com a cor “rgb(238,238,238)”.
+
+
+//assim adicionamos e removemos algum atributo de alguma tag usando o mesmo evento
 let CorFeriados = document.querySelector('#btn-holiday');
 CorFeriados.addEventListener('click', cor) 
 
@@ -80,3 +90,17 @@ for(let i = 0; i < mudarCorFeriados.length; i += 1){
 }
 
 
+//Parte 4
+//Implemente uma função que crie dinamicamente um botão com o nome "Sexta-feira".
+
+function sextaFeira (sexta) { 
+  let buttoSextaFeira = document.createElement('button');
+  //Adicione a esse botão o ID "btn-friday";
+  buttoSextaFeira.setAttribute('id', 'btn-friday');
+  //Sua função deve receber como parâmetro a string “Sexta-feira”;
+  buttoSextaFeira.innerHTML = sexta;
+  //Adicione esse botão como filho/filha da tag <div> com classe "buttons-container".
+  buttonsContainer.appendChild(buttoSextaFeira);
+}
+
+sextaFeira('Sexta-Feira')
