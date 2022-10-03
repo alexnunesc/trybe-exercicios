@@ -58,6 +58,16 @@
   <body>
     <script>
       // COLOQUE SEU CÓDIGO AQUI
+      //Adicione a tag h1 com o texto Exercício - JavaScript DOM como filho da tag body
+      const body = document.querySelector('body');//create pai element
+      const h1FilhoBody = document.createElement('h1'); //create h1
+      h1FilhoBody.innerHTML = 'Exercício - JavaScript DOM'; //add text in h1
+      body.appendChild(h1FilhoBody);//adicionado filho
+
+      //Adicione a tag main com a classe main-content como filho da tag body.
+      const main = document.createElement('main');
+      main.className = 'main-content';
+      body.appendChild
     </script>
   </body>
 </html>

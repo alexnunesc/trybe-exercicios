@@ -20,17 +20,31 @@
     </section>
   </main>
   <script>
+    //rrequisito 01 Crie um irmão para `elementoOndeVoceEsta`.
     let pai = document.querySelector('#pai');
     let irmao = document.createElement('section');
     irmao.id = 'filhoFilho';
     irmao.innerHTML = 'oi';
     pai.appendChild(irmao);
 
+    //requsito 02 Crie um filho para `elementoOndeVoceEsta`
+    const elementoOndeVoceEsta = document.querySelector('#elementoOndeVoceEsta');
+
+    const filhoElementoOndeVoceEsta = document.createElement('section');
+
+    filhoElementoOndeVoceEsta.id = 'filhoElementoOndeVCesta';
+
+    filhoElementoOndeVoceEsta.innerHTML = 'certo';
+
+    elementoOndeVoceEsta.appendChild(filhoElementoOndeVoceEsta);
+
+    //rrequisito 03  Crie um filho para `primeiroFilhoDoFilho`.
     let criarFilho = document.querySelector('#primeiroFilhoDoFilho');
     let filho1 = document.createElement('section');
     filho1.id = 'teste';
     criarFilho.appendChild(filho1);
-    
+
+    //rrequisito 04  A partir desse filho criado, acesse `terceiroFilho`.
     let terciroF = filho1.parentElement.parentElement.nextElementSibling;
     console.log(terciroF);
 

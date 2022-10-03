@@ -21,12 +21,12 @@
     let list = document.querySelector('.list');                                                                         
     for (let i =  0; i < ingredientes.length; i += 1){
       let li = document.createElement('li');
-      li.className = 'remove';
+      li.className = 'numeros';
       li.innerHTML = ingredientes[i];
       list.appendChild(li);
     }
 
-    let removeIngredientes = document.querySelectorAll('.remove');
+    let removeIngredientes = document.querySelectorAll('.numeros');
 
     for (let i = 0; i < removeIngredientes.length; i += 1) {
       let elemet = removeIngredientes[i];
