@@ -67,15 +67,16 @@ CorFeriados.addEventListener('click', cor)
 
 function cor () {
 
-  let mudarCorFeriados = document.querySelector('.holiday');
+  let mudarCorFeriados = document.querySelectorAll('.holiday');
 
-  if (mudarCorFeriados.style.backgroundColor.includes('green')){
-    mudarCorFeriados.style.backgroundColor = 'rgb(238,238,238)';
+for(let i = 0; i < mudarCorFeriados.length; i += 1){
+  if (mudarCorFeriados[i].style.backgroundColor.includes('green')){
+    mudarCorFeriados[i].style.backgroundColor = 'rgb(238,238,238)';
   } else {
-    let mudarCorFeriados = document.querySelector('.holiday');
-    mudarCorFeriados.style.backgroundColor = 'green';
+    mudarCorFeriados[i].style.backgroundColor = 'green';
   }
-  
+  console.log(mudarCorFeriados);
+  }
 }
 
 
