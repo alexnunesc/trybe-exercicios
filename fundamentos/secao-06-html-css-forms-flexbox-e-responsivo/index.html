@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrybeTrip</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header id="header">
+    <h1>TrybeTrip</h1>
+  </header>
+  <main id="main">
+    <section id="center">
+      <form action="" method="get" id="form">
+        <h4>Forms</h4>
+        <section class="name">
+          <label for="nome">Nome:
+            <input type="text" id="nome" placeholder="Nome" autofocus maxlength="40"></label>
+        </section>
+
+        <section class="email">
+          <label for="email">E-mail:
+            <input type="email" name="email" id="email" placeholder="E-mail" autocomplete="off" minlength="10"
+              maxlength="50">
+          </label>
+        </section>
+
+        <section class="radio">
+          <h4>Destino Preferido:</h4>
+          <label for="cidade">Cidade <input type="radio" name="destinoPreferido" id="cidade" value="Cidade"></label>
+
+          <label for="Campo">Campo <input type="radio" name="destinoPreferido" id="Campo" value="Campo"></label>
+
+          <label for="Praia">Praia <input type="radio" name="destinoPreferido" id="Praia" value="Praia"></label>
+
+          <label for="Montanhas">Montanhas <input type="radio" name="destinoPreferido" id="Montanhas" value="Montanhas"></label>
+        </section>
+
+        <section class="area">
+          <h4>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</h4>
+          <textarea name="area" id="area" cols="45" rows="10" placeholder="Digite aqui"></textarea>
+        </section>
+        <section class="date">
+          <label for="date">Melhor data: 
+            <input type="date" name="date" id="date">
+          </label>
+        </section>
+        <section class="termos">
+          <label for="termos1"><input type="checkbox" name="termosc" id="termos1"> Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+          </label>
+        </section>
+        <section class="termos">
+          <label for="termos2"><input type="checkbox" name="termosc" id="termos2"> Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+          </label>
+        </section>
+
+        <section class="buttons">
+          <label for="buttonEviar">
+            <button type="submit" id="buttonEnviar">Enviar</button>
+          </label>
+          <label for="buttonReset">
+            <button type="reset" id="buttonReset">Apagar</button>
+          </label>
+        </section>
+
+      </form>
+
+    </section>
+  </main>
+  <footer id="footer">
+    <p>Formato do Formulário TrybeTrip.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
