@@ -1,0 +1,14 @@
+/*cor fundo*/
+.img {
+    width: 350px;
+}
+
+.lorem {
+    color: aqua;
+}
+.paragrafos {
+    background-color: aquamarine;
+    width: 80%;
+    height: 300px;
+    overflow: auto;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main id="paiDoPai">
+    <section id="pai">
+      <section id="primeiroFilho">o</section>
+      <section id="elementoOndeVoceEsta">oo
+        <section id="primeiroFilhoDoFilho">ooo</section>
+        <section id="segundoEUltimoFilhoDoFilho">oo</section>
+      </section>
+      Atenção!
+      <section id="terceiroFilho"></section>
+      <section id="quartoEUltimoFilho"></section>
+    </section>
+  </main>
+  <script>
+    let paipai = document.querySelector('#paiDoPai');
+
+    let removeElmentesPaiPai = document.querySelectorAll('.paiDoPai');
+
+    for ( let i = 0; i < removeElmentesPaiPai.length; i += 1){
+      let r = removeElmentesPaiPai[i];
+      if (r.innerText.includes()) {
+        paipai.removeChild(r);
+      }
+    }
+
+
+  </script>
+</body>
+</html>

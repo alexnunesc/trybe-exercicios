@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <header>FEijão</header>
+  </main>
+  <section>
+    <ul class="list">
+
+    </ul>
+  </section>
+  <script>
+    let ingredientes = ['um', 'dois', 'três', 'quatro', 'cinto', 'seis', 'sete'];
+
+    let list = document.querySelector('.list');                                                                         
+    for (let i =  0; i < ingredientes.length; i += 1){
+      let li = document.createElement('li');
+      li.innerHTML = ingredientes[i];
+      list.appendChild(li);
+    }
+  </script>
+</body>
+</html>

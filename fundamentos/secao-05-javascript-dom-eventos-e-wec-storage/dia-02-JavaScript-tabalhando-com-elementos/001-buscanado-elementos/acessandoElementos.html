@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main id="paiDoPai">
+    <section id="pai">pai
+      <section id="primeiroFilho">primeiroFilho</section>
+      <section id="elementoOndeVoceEsta">elementoOndeVoceEsta
+        <section id="primeiroFilhoDoFilho">primeiroFilhoDoFilho</section>
+        <section id="segundoEUltimoFilhoDoFilho">segundoEUltimoFilhoDoFilho</section>
+      </section>
+      Atenção!
+      <section id="terceiroFilho">terceiroFilho</section>
+      <section id="quartoEUltimoFilho">quartoEUltimoFilho</section>
+    </section>
+  </main>
+  <script>
+    document.querySelector('#elementoOndeVoceEsta').parentElement.style.color = 'red';
+
+    document.querySelector('#primeiroFilho').innerHTML = 'Olá, Mundo!'
+
+    document.querySelector('#pai').firstElementChild.style.color = 'blue';
+
+    document.querySelector('#elementoOndeVoceEsta').previousElementSibling.innerHTML = 'deu certo';
+
+    document.querySelector('#elementoOndeVoceEsta').parentNode.parentNode;
+
+    document.querySelector('#elementoOndeVoceEsta').nextElementSibling.innerText = 'hi guys';
+
+    document.querySelector('#pai').lastElementChild.previousElementSibling.innerText = 'hguys';
+  </script>
+</body>
+</html>
