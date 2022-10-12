@@ -1,0 +1,95 @@
+body {
+    background-color: rgb(5, 5, 5);
+    color: rgb(0, 0, 0);
+    border: 5px solid rgb(247, 244, 244);
+}
+
+
+ /*area de cabecalhos*/
+ header {
+    background-color: rgb(241, 238, 9);
+    border: 5px solid violet;
+ }
+ h1 , h2 {
+    border: 3px solid rgb(0, 0, 0);
+    text-align: center;
+    background-color: cadetblue;
+ }
+
+
+ /*area de navegação*/
+nav {
+    border: 5px solid rgb(10, 14, 255);
+    background-color: rgb(13, 104, 4);
+    color: white;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+ nav ul {
+    border: 3px solid rgb(255, 44, 7);
+    padding: 5px;
+ }
+ nav ul li {
+    border: 3px solid rgb(8, 216, 243);
+    display: inline-block;
+    margin: 0 50px;
+    padding: 5px;
+    text-align: center;
+ }
+ 
+
+ /*area de corpo*/
+ h1 , h2 {
+    border: 3px solid rgb(0, 0, 0);
+    text-align: center;
+    background-color: cadetblue;
+ }
+aside {
+    display: inline-block;
+    border: 3px solid rgb(252, 172, 0);
+    width: 28%;
+    height: 500px;
+    background-color: rgb(47, 165, 219);
+    padding: 5px;
+    vertical-align: top;
+ }
+main {
+    display: inline-block;
+    border: 5px solid rgb(255, 0, 0);
+    width: 65%;
+    background-color: rgb(219, 150, 47);
+    padding: 5px;
+    text-align: center;
+}
+
+
+/*area de artigo*/
+
+ article{
+    padding: 10px;
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgb(219, 47, 219);
+    display: inline-block;
+
+    margin: 5px 50px 50px 40px;
+ }
+ section {
+    padding: 10px;
+    border: 3px solid rgb(0, 0, 0);
+    background-color: rgb(47, 219, 219);
+    margin: 10px;
+ }
+img.Stomatopoda {
+   width: 100%;
+}
+
+
+/*footer*/
+ footer {
+    border: 5px solid rgb(1, 141, 43);
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(0, 4, 255);
+ }
