@@ -1,0 +1,23 @@
+{
+  "name": "trybe-exercicios",
+  "version": "1.0.0",
+  "description": "Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[AlexNunesCunha](https://www.linkedin.com/in/alexnunesc/)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexnunesc/trybe-exercicios.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexnunesc/trybe-exercicios/issues"
+  },
+  "homepage": "https://github.com/alexnunesc/trybe-exercicios#readme",
+  "devDependencies": {
+    "jest": "^29.2.1"
+  }
+}
