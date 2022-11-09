@@ -1,0 +1,19 @@
+{
+  "name": "aula-ao-vivo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx vite --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^3.2.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "eslint-plugin-react": "^7.31.10"
+  }
+}
