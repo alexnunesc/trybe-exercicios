@@ -1,0 +1,160 @@
+.top {
+  width: 500px;
+  height: 270px;
+  border: 5px solid white;
+  border-top: none;
+  background-image: url('./imgs/topBackground.png');
+  background-size: 250px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.shuffle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.53);
+  border: 3px solid #FFFFFF;
+}
+
+.shuffle img {
+  width: 100%;
+}
+ 
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  width: 100px;
+  font-size: 36px;
+  color: black;
+  background-color: white;
+  border-radius: 21px;
+}
+
+.cards {
+  background-image: url('./imgs/cardsBase.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cards > .card {
+  position: absolute;
+  width: 80%;
+}
+
+.cards > .card:nth-child(2) {
+  left: 25%;
+}
+
+.cards > .card:nth-child(3) {
+  left: 40%;
+}
+
+.cards > .card:nth-child(4) {
+  left: 55%;
+}
+
+.cards > .card:nth-child(5) {
+  left: 70%;
+}
+
+.cards > .card:nth-child(6) {
+  left: 85%;
+}
+
+.player-1.cards {
+  height: 170px;
+  width: 116px;
+}
+
+.player-2.cards {
+  height: 112px;
+  width: 77px;
+}
+
+h1 {
+  font-size: 48px;
+  color: white;
+  text-align: center;
+}
+
+.result {
+  width: 45px;
+  height: 50px;
+}
+
+.gameBtn { /* css em comum para os dois botões */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 35px;
+  border: 4px solid #FFFFFF;
+  border-radius: 5px;
+  color: white;
+}
+
+.gameBtn.draw {
+  background-color: rgb(137, 207, 31);
+  border-color: rgb(153, 255, 0);
+}
+
+.gameBtn.stop {
+  background-color: rgb(214, 0, 0);
+  border-color: rgb(255, 0, 0);
+}
+
+.hidden {
+  opacity: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  background-image: url('./imgs/background.png');
+  background-position: center;
+  margin: 0;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 45%;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+}
+
+.gameBtn:enabled:hover {
+  transform: scale(1.1);
+}
+
+.gameBtn:enabled:active {
+  transform: scale(0.9);
+}
+
+.gameBtn:disabled {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.5);
+}
