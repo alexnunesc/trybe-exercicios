@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      #container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button {
+        height: 50px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <p>Color: <span id="value">white</span></p>
+      <button id="previous">Previous color</button>
+      <button id="next">Next color</button>
+    </div>
+    <script>
+      // 1 - Crie uma store para a nossa aplicação.
+
+      const INITIAL_STATE = {
+        colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
+        index: 0,
+      };
+
+      // 2 - Crie um reducer, implementando um switch que retorne apenas o estado inicial como default.
+
+      const reducer = (state = INITIAL_STATE, action) => {
+      switch (action.type) {
+        case 'NEXT_COLOR':
+          return {
+            ...state,
+            index: state.index === state.colors.length -1 ? 0 :  state.index + 1
+          }
+        case 'PREVIUS_COLOR':
+          
+        default:
+          return state;
+        }
+      };
+      
+      // 1 - Crie uma store para a nossa aplicação.
+      const store = Redux.createStore(reducer);
+
+      const btnPrevious = document.getElementById('previous');
+      const btnNext = document.getElementById('next');
+
+      btnPrevious.addEventListener('click', () => {
+        console.log('jdubsj');
+        // store.dispatch({ type: 'red' });
+      })
+
+      btnPrevious.addEventListener('click', () => {
+        console.log('jdubsj');
+        // store.dispatch({ type: 'red' });
+      })
+
+
+      store.subscribe(() => {
+    
+        const { colors, index } =  store.getState();
+        const value = document.getElementById('value');
+        const container = document.getElementById('container');
+
+        value.innerHTML = colors[index];
+        container.style.backgroundColor = colors[index];
+      })
+    </script>
+  </body>
+</html>
