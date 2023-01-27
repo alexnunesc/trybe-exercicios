@@ -2,10 +2,8 @@
 import {legacy_createStore as createStore } from 'redux';
 import { composeWithDevTools } from '@redux-devtools/extension';
 
-const INITIAL_STATE = { count: 0};
+import rootReducer from '../redux/reducers';
 
-const reducer = (state = INITIAL_STATE, action) => state;
-
-const store = createStore(reducer, composeWithDevTools());
+const store = createStore(rootReducer, composeWithDevTools());
 
 export default store;
