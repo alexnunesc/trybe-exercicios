@@ -1,50 +1,62 @@
-import { useEffect } from 'react'
-import { useState } from 'react'
-import './App.css'
+import { useEffect, useState } from 'react';
+
+import './App.css';
+
+import messagesList from './data/messagesList';
+import { READ, UNREAD } from './constants';
+
+import Controls from './components/Controls';
+import List from './components/List';
 
 function App() {
-
-  const [caixa, setCaixa] = useState([
-    {
-      id: 0,
-      title: "1",
-      status: 0,
-    },
-    {
-      id: 1,
-      title: "2",
-      status: 0,
-    }
-  ])
-
-  const [desmarcar, setDesmarcar] = useState(0);
-  // const [marcar, setMarcar] = useState(false);
+  const [messages, setMessages] = useState(messagesList);
 
   useEffect(() => {
-  
-    setCaixa({
-      ...caixa,
-      status: desmarcar
-    })
-  },[desmarcar])
+    const isAllMessagesRead = messages.every(({ status }) => status === READ);
 
-  console.log(desmarcar);
-  // console.log(caixa);
+    if (isAllMessagesRead) {
+      alert('Parabéns! Você leu todas suas mensagens!');
+    }
+  }, [messages]);
 
+  const setMessageStatus = (messageId, newStatus) => {
+    const updatedMessages = messages.map((currentMessage) => {
+      if (currentMessage.id === messageId) {
+        return { ...currentMessage, status: newStatus };
+      }
+      return currentMessage;
+    });
+
+    setMessages(updatedMessages);
+  };
+
+  const markAllAsRead = () => {
+    const allAsRead = messages.map((m) => ({ ...m, status: READ }));
+    setMessages(allAsRead);
+  };
+
+  const markAllAsUnread = () => {
+    const allAsRead = messages.map((m) => ({ ...m, status: UNREAD }));
+    setMessages(allAsRead);
+  };
 
   return (
     <div className="App">
-        {
-          [caixa].map((e) => (
-            <div key={e.id}>
-              <p>{e.title}</p>
-              <button onClick={ () => setDesmarcar((desmarcar) => desmarcar + 1)}>marcar</button>
-              <button onClick={ () => setDesmarcar((desmarcar) => desmarcar - 1)}>desmarcar</button>
-            </div>
-          ))
-        }
+      <header>
+        <h1>TrybeMail</h1>
+      </header>
+
+      <Controls
+        markAllAsRead={ markAllAsRead }
+        markAllAsUnread={ markAllAsUnread }
+      />
+
+      <List
+        messages={ messages }
+        setMessageStatus={ setMessageStatus }
+      />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
