@@ -1,0 +1,25 @@
+version: '3'
+services:
+
+  frontend:
+    build: frontend/    # Especificamos o contexto, ou seja, a pasta onde está o Dockerfile.
+    ports:
+      - 3000:3000
+    restart: on-failure
+    depends_on:
+      - backend
+
+  backend:
+    build: backend/     # Mesmo caso aqui.
+    ports:
+      - 3001:3001
+    restart: on-failure
+    environment:
+      - DB_HOST=database 
+      # O serviço backend agora possui uma variável de ambiente chamada DB_HOST, uma referência ao serviço database que poderá ser utilizada pelo servidor para se conectar ao banco de dados.
+    depends_on:
+      - database
+
+  database:
+    image: betrybe/docker-compose-example-database:v1    # Especificamos a Imagem Docker diretamente.
+    restart: on-failure

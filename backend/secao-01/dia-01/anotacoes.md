@@ -1,5 +1,6 @@
 # Executando um novo container.
 
+docker container run -it <flags>? <imagem>:<tag> <argumentos>?
 docker container run <flags>? <imagem>:<tag> <argumentos>?
 Ex.
 **docker container run --name my-container alpine:3.14 echo "Hello World"**
@@ -11,7 +12,7 @@ Para executar em segundo plano.
   <flag> -d
 
 sleep faz ele dormir por 5 minutos.
-  >> docker container run --rm -d alpine:3.14 sleep 300
+  >> docker container run -it --rm -d alpine:3.14 sleep 300
   >> --rm remover o container.
   >> stop -t 0. para encerrar a execução.
 
@@ -25,11 +26,13 @@ Nós vamos utilizá-lo para executar o programa <sh>, para acesso do terminal de
 # Testando o acesso ao terminal.
 
 docker exec -it <nome-do-container> <comando-a-ser-executado>
- >> docker container run --rm -d --name meu-container alpine:3.14 sleep 300
+ <!-- >> docker container run --rm -d --name meu-container alpine:3.14 sleep 300 -->
 
-Dentro do terminal.
- >> docker exec -it meu-container sh
+Entrar no terminal.
+ >> docker exec -it meu-container sh 
+ >> docker attach meu-container
  dentro do comando.
+ Ex.
  >> ps aux
  sair do comando.
  >> exit
@@ -98,3 +101,66 @@ ps aux, que acabamos de executar para obter esta lista;
 
   limpando containes.
   >> docker container prune
+
+
+  **como sair sem fecha o container**
+   >> ctrl + p ctrl + q
+
+
+# Crinando imagem.
+  >> docker build -t site-hugo .
+# Criando e execunatdo o container.
+  >> docker run -p 1234:80 -d --name meu-container site-hugo
+
+  remover container 
+  >> docker rm -f meu-container
+
+
+# Múltiplos estágio, iamgens intermediárias.
+
+### Aquivo Dockerfile.
+>Ex. de dockerfile<
+
+**Ex**
+<!-- linha usada para definir os estagios, cada FROM criar uma imagen intermediária, a ultima será a final. -->
+FROM alpine:3.14 AS primeiro-estagio
+WORKDIR /site
+
+<!-- configuração da ferramenta e rotas pedidas -->
+COPY config.toml config.toml
+COPY index.html /site/layouts/index.html
+COPY _index.md /site/content/_index.md
+
+
+RUN apk add hugo
+RUN hugo --minify --gc
+
+# Segundo Estágio
+<!-- Estagio final -->
+>> FROM nginx:1.21.3-alpine AS segundo-estagio
+<!-- Usamos a --from=primeiro-estagio para copy tudo do estagios anteriores. -->
+>> COPY --from=primeiro-estagio /site/public/ /usr/share/nginx/html
+
+<!-- Linha usada para excutar os comandos -->
+>> ENTRYPOINT ["nginx", "-g", "daemon off;"]
+
+
+
+# RUN vs. ENTRYPOINT vs. CMD
+
+>> RUN <comando> <argumento1> <argumento2> <argumentoN>:
+
+  Indica que o comando dado deve ser executado durante a construção da imagem Docker!
+  Ou seja, é muito comum utilizar o RUN para fazer instalações de dependências.
+
+>> ENTRYPOINT <comando> <argumento1> <argumento2> <argumentoN>:
+
+  Indica qual é o comando (e seus argumentos) que deve ser executado ao iniciar esta imagem Docker como um container;
+  Considere o ENTRYPOINT como obrigação de comando a ser executado;
+  Ele sempre será utilizado como ponto de entrada da imagem.
+
+>> CMD <comando> <argumento1> <argumento2> <argumentoN>:
+
+  Indica qual é o comando (e seus argumentos) que pode ser executado ao iniciar esta imagem Docker como um container;
+  Conside o CMD como sugestão de comando a ser executado;
+  Ele pode ser substituído ao executar o comando docker run imagem <comando> <argumento1>
