@@ -150,6 +150,30 @@
    >> docker-compose logs <nome-do-serviço>
 
 
+# Update dos containes.
+
+  >> docker-compose up -d --build
+
+# DEscer os containes.
+  >> docker-compose down 
+
+# Subindo um seerviço esspecifico.
+  docker-compose up <serviço>
+  Ex.
+  >> docker-compose up backend
+
+  https://content-assets.betrybe.com/prod/Subindo%20apenas%20o%20servi%C3%A7o%20de%20backend%20e%20suas%20depend%C3%AAncias.png
+
+# Ver os logs dos serviçõs.
+
+  docker-compose logs <nome-do-serviço>
+  Ex.
+  >> docker-compose logs backend
+
+# Limitas as linhas de logs.
+
+  >> docker-compose logs --tail 5 database
+  podemos adicionar **-f** para ver em tempo real.
 
 
 
