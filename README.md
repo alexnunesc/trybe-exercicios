@@ -20,3 +20,34 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] 2-3: _Internet - Entendendo como ela funciona_
 
 [etc...]
+
+  up: async (queryInterface, Sequelize) => {
+    await queryInterface.createTable('books', {
+      id: {
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true,
+        type: Sequelize.INTEGER
+      },
+      title: {
+        type: Sequelize.STRING
+      },
+      author: {
+        type: Sequelize.STRING
+      },
+      pageQuantity: {
+        type: Sequelize.INTEGER
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      }
+    });
+  },
+  down: async (queryInterface, Sequelize) => {
+    await queryInterface.dropTable('books');
+  }

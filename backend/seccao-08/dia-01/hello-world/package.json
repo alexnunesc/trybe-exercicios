@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  }
+}

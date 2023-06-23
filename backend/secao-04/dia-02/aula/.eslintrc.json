@@ -1,0 +1,6 @@
+{
+  "extends": "trybe-backend",
+  "env": {
+    "es2020": true
+  }
+}

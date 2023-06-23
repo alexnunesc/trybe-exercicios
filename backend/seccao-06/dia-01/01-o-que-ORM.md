@@ -1,0 +1,2 @@
+# Mapeamento objeto-relacional ou ORM (Object-Relational Mapping)
+  é uma técnica que permite fazer um mapeamento estrutural entre as entidades do banco de dados e os objetos que as representam no código JavaScript. 
